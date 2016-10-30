@@ -14,10 +14,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 4.2'
 gem 'rails-controller-testing'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
-  gem 'sqlite3'
   gem 'byebug', platform: :mri
   gem 'pry'
 end
@@ -29,9 +29,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production do
-  gem 'pg'
-end
+
 
 
 

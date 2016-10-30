@@ -1,0 +1,13 @@
+<%= form_for(@meal) do |f| %>
+<div class= "field">
+<%= f.label :dish_name %>
+<%= f.select :dish_name, ['fresh','old','rooting'] %>
+</div>
+<div class="field">
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+</div>
+<div class= "actions" %>
+<%= f.submit %>
+</div>
+<% end %>
