@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   get 'meals/new'
 
   devise_for :users
-  resources :orders
-  resources :meals
+
+  resources :orders do
+    resources :meals
+  end
 
 
   root 'orders#index'

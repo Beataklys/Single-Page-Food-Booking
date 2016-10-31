@@ -3,6 +3,10 @@
 <%= f.label :restaurant_name %>
 <%= f.text_field :restaurant_name %>
 </div>
+<div class= "field">
+
+  <%= f.select :order_status, ['completed', 'incompleted'] %>
+</div>
 <div class="actions">
 <%= f.submit %>
 </div>

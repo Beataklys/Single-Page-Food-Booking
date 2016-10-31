@@ -1,7 +1,14 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  def index
-    @orders = Order.all
+
+ def index
+   @orders = Order.all
+   @order =Order.new
+   @meal= Meal.new
+  #  @orders = current_user.orders
+  #   @meal = Meal.new
+  #   @order= current_order
+  #   respond_with(@meals)
   end
   def new
     @order = Order.new
@@ -22,6 +29,6 @@ class OrdersController < ApplicationController
 
 
   def order_params
-    params.require(:order).permit(:restaurant_name, :order_status)
+    params.require(:order).permit(:restaurant_name, :order_status, :dish_name, :price)
   end
 end
